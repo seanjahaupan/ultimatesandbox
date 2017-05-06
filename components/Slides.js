@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import {StyleSheet, ScrollView, Text, View, Dimensions } from 'react-native';
+import {Button} from 'react-native-elements'
+
+import WelcomePage from './WelcomePage';
 
 const SCREEN_WIDTH = Dimensions.get('window').width
 class Slides extends Component{
@@ -9,10 +12,23 @@ class Slides extends Component{
       return (
         <View key={slide.text} style = {[styles.slide, {backgroundColor:slide.color}]}>
           <Text style={styles.slideText}>{slide.text}</Text>
+          <Button 
+          onPress={this._letsGo}
+          title='LETS GO!!'
+          color= 'black'
+          backgroundColor = '#65B94A'
+          style={{paddingTop:100}}
+          
+        />
         </View>
       );
     })
   }
+
+  _letsGo(){
+    console.log('LETS FUCKING GO!!!!')
+  }
+
   render() {
     return (
       <ScrollView
@@ -21,6 +37,8 @@ class Slides extends Component{
         pagingEnabled
         >
         {this.renderSlides()}
+
+        
       </ScrollView>
     );
   }

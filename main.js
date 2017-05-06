@@ -1,7 +1,8 @@
+
 import Expo from 'expo';
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, Dimensions } from 'react-native';
-import Slides from './components/Slides'
+import Slides from './components/Slides';
 
 const SCREEN_WIDTH = Dimensions.get('window').width
 const SLIDE_DATA = [{ text:'First page', color:'blue'}, {text:'Second page', color:'green'}];
@@ -10,7 +11,7 @@ class App extends React.Component {
     return (
       <View style={styles.container}>
         <Slides data={SLIDE_DATA} />
-        <Text>Open up main.js to start working on your app!</Text>
+        {/*<Text>Open up main.js to start working on your app!</Text>*/}
       </View>
     );
   }

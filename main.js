@@ -2,6 +2,8 @@
 import Expo from 'expo';
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, Dimensions } from 'react-native';
+import Redux from 'redux';
+import ReactRedux from 'react-redux';
 import Slides from './components/Slides';
 
 const SCREEN_WIDTH = Dimensions.get('window').width
